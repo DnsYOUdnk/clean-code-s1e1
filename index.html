@@ -14,11 +14,11 @@
         Want more details?</a>
   </header>
   <main class="main">
-    <section class="add-task" id="topSectionForAddingElementToList">
+    <section class="add-task">
       <label for="add-task__new" class="add-task__name label__name">Add Item</label>
       <div class="add-task__wrapper">
         <input id="add-task__new" class="add-task__input input__task" type="text">
-        <button class="add-task__button">Add</button>
+        <button class="add-task__btn_add">Add</button>
       </div>
     </section>
     <section class="planned-task">
@@ -28,15 +28,15 @@
           <input type="checkbox" class="planned-task__checkbox">
           <label class="planned-task__name label__name">Pay Bills</label>
           <input type="text" class="planned-task__input input__task">
-          <button class="planned-task__button_edit">Edit</button>
-          <button class="planned-task__button_remove"><img src="./remove.svg" alt="Button remove" class="button_remove__img"></button>
+          <button class="planned-task__btn_edit btn_edit">Edit</button>
+          <button class="planned-task__btn_del btn_del"><img src="./remove.svg" alt="Button remove" class="button_del__img"></button>
         </li>
-        <li class="planned-task__item planned-task__item__edit">
+        <li class="planned-task__item planned-task__edit-mode">
           <input class="planned-task__checkbox" type="checkbox">
           <label class="planned-task__name label__name">Go Shopping</label>
           <input type="text" value="Go Shopping" class="planned-task__input input__task">
-          <button class="planned-task__button_edit">Save</button>
-          <button class="planned-task__button_remove"><img src="./remove.svg" alt="Button remove"></button>
+          <button class="planned-task__btn_edit btn_edit">Save</button>
+          <button class="planned-task__btn_del btn_del"><img src="./remove.svg" alt="Button remove"></button>
         </li>
       </ul>
     </section>
@@ -45,10 +45,10 @@
       <ul class="completed-task__items">
         <li class="completed-task__item">
           <input type="checkbox" checked class="completed-task__checkbox">
-          <label class="completed-task__name">See the Doctor</label>
+          <label class="completed-task__name label__name">See the Doctor</label>
           <input type="text" class="completed-task__input input__task">
-          <button class="planned-task__button_edit">Edit</button>
-          <button class="planned-task__button_remove"><img src="./remove.svg" alt="Button remove"></button>
+          <button class="completed-task__btn_edit btn_edit">Edit</button>
+          <button class="completed-task__btn_del btn_del"><img src="./remove.svg" alt="Button remove"></button>
         </li>
       </ul>
     </section>
