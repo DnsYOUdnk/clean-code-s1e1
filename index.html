@@ -7,48 +7,52 @@
       rel="stylesheet">
   <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
-<body class="todo">
+<body class="todo-app">
   <header class="header">
-    <img src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix" class="header__img">
+    <img class="header__img" src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
     <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">
         Want more details?</a>
   </header>
   <main class="main">
     <section class="add-task">
-      <label for="add-task__new" class="add-task__name label__name">Add Item</label>
+      <label for="add-task__new" class="add-task__title">Add Item</label>
       <div class="add-task__wrapper">
-        <input id="add-task__new" class="add-task__input input__task" type="text">
-        <button class="add-task__btn_add">Add</button>
+        <input type="text" id="add-task__new" class="add-task__input">
+        <button class="add-task__btn-add btn-all">Add</button>
       </div>
     </section>
     <section class="planned-task">
       <h3 class="planned-task__title">Todo</h3>
       <ul class="planned-task__items" id="planned-task__id">
-        <li class="planned-task__item">
-          <input type="checkbox" class="planned-task__checkbox">
+        <li class="planned-task__item list-item">
+          <input type="checkbox" class="planned-task__checkbox list-item__checkbox">
           <label class="planned-task__name label__name">Pay Bills</label>
-          <input type="text" class="planned-task__input input__task">
-          <button class="planned-task__btn_edit btn_edit">Edit</button>
-          <button class="planned-task__btn_del btn_del"><img src="./remove.svg" alt="Button remove" class="button_del__img"></button>
+          <input type="text" class="planned-task__input list-item__input-task">
+          <button class="planned-task__btn-edit list-item__btn-edit btn-all">Edit</button>
+          <button class="planned-task__btn-del list-item__btn-del btn-all">
+            <img src="./remove.svg" alt="Button remove" class="list-item__btn-del__img">
+           </button>
         </li>
-        <li class="planned-task__item planned-task__edit-mode">
-          <input class="planned-task__checkbox" type="checkbox">
+        <li class="planned-task__item list-item planned-task__edit-mode">
+          <input type="checkbox" class="planned-task__checkbox list-item__checkbox">
           <label class="planned-task__name label__name">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="planned-task__input input__task">
-          <button class="planned-task__btn_edit btn_edit">Save</button>
-          <button class="planned-task__btn_del btn_del"><img src="./remove.svg" alt="Button remove"></button>
+          <input type="text" value="Go Shopping" class="planned-task__input list-item__input-task">
+          <button class="planned-task__btn-edit list-item__btn-edit btn-all">Save</button>
+          <button class="planned-task__btn-del list-item__btn-del btn-all">
+            <img src="./remove.svg" alt="Button remove" class="list-item__btn-del__img">
+          </button>
         </li>
       </ul>
     </section>
     <section class="completed-task">
       <h3 class="completed-task__title">Completed</h3>
       <ul class="completed-task__items">
-        <li class="completed-task__item">
-          <input type="checkbox" checked class="completed-task__checkbox">
+        <li class="completed-task__item list-item">
+          <input class="completed-task__checkbox list-item__checkbox" type="checkbox" checked>
           <label class="completed-task__name label__name">See the Doctor</label>
-          <input type="text" class="completed-task__input input__task">
-          <button class="completed-task__btn_edit btn_edit">Edit</button>
-          <button class="completed-task__btn_del btn_del"><img src="./remove.svg" alt="Button remove"></button>
+          <input type="text" class="completed-task__input list-item__input-task">
+          <button class="completed-task__btn_edit list-item__btn-edit btn-all">Edit</button>
+          <button class="completed-task__btn-del list-item__btn-del btn-all"><img src="./remove.svg" alt="Button remove" class="list-item__btn-del__img"></button>
         </li>
       </ul>
     </section>
