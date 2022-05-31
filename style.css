@@ -136,14 +136,10 @@
   margin: 0 10px;
 }
 
-.list-item > .label__name {
+.list-item .label__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
-}
-
-.list-item > .list-item__input-task {
   width: 226px;
 }
 
@@ -168,11 +164,11 @@
   display: none;
 }
 
-.list-item .planned-task__edit-mode > .list-item__input-task {
+.planned-task__edit-mode .list-item__input-task {
   display: inline-block;
   width: 224px;
 }
 
-.planned-task__item__edit-mode .label__name {
+.planned-task__edit-mode .label__name {
   display: none;
 }

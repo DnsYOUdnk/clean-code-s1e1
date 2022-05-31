@@ -10,7 +10,7 @@
 
 var taskInput=document.getElementById("add-task__new");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("planned-task__id");//ul of #incompleteTasks
+var incompleteTaskHolder=document.querySelector(".planned-task__items");//ul of #incompleteTasks
 var completedTasksHolder=document.querySelector(".completed-task__items");//completed-tasks
 
 
@@ -43,13 +43,12 @@ var createNewTaskElement=function(taskString){
     editInput.type="text";
     editInput.className="list-item__input-task";
 
-    deleteButtonImg.className="list-item__btn-del__img";
-
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="list-item__btn-edit btn-all";
 
     deleteButton.className="list-item__btn-del btn-all";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="list-item__btn-del__img";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,7 +86,6 @@ var editTask=function(){
 
 
     var listItem = this.parentNode;
-
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector(".label__name");
     var editBtn=listItem.querySelector(".list-item__btn-edit");
@@ -97,10 +95,10 @@ var editTask=function(){
 
         //switch to .editmode
         //label becomes the inputs value.
-        label.innerText=editInput.value;
+        label.innerText = editInput.value;
         editBtn.innerText="Edit";
     }else{
-        editInput.value=label.innerText;
+        editInput.value = label.innerText;
         editBtn.innerText="Save";
     }
 
